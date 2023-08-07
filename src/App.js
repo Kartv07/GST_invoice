@@ -36,36 +36,38 @@ function App() {
   ];
 
   return (
-    <div className=" text-3xl grid grid-rows-6 h-[72rem] grid-cols-2 m-2 border-2 border-black lg:mx-32 sm:mx-0 md:mx-0 xl:mx-80">
-      <div className="p-3">
-        <h1 className="text-2xl font-semibold">Sender</h1>
-        <h2 className="my-2 text-xl font-semibold">{senderName}</h2>
-        <p className="text-sm">{senderAddress}<br/> Ph No. {senderPhone} <br/> GSTIN:{senderGST}</p>
-      </div>
-
-      <div className="border-1 border-black grid grid-cols-3 ">
-        <div className="border-l-2 border-r-2 border-black text-xl text-center font-semibold py-12">Invoice No. <p className="text-sm font-normal">{invoiceNo}</p></div>
-        <div className="border-1 grid grid-rows-2 h-[190px] ">
-          <div className="border-d-1 text-xl text-center font-semibold py-6">Invoice Date <p className="text-sm font-normal">{invoiceDate}</p></div>
-          <div className="border-t-2 border-black text-xl text-center font-semibold py-6">Invoice Due <p className="text-sm font-normal">{invoiceDue}</p></div>
+    <div className=" text-3xl m-2 border-2 border-black lg:mx-32 sm:mx-0 md:mx-0 xl:mx-80">
+      <div className='grid grid-rows-2 grid-cols-2 flex'>
+        <div className="p-3 w-full">
+          <h1 className="text-2xl font-semibold">Sender</h1>
+          <h2 className="my-2 text-xl font-semibold">{senderName}</h2>
+          <p className="text-sm">{senderAddress}<br/> Ph No. {senderPhone} <br/> GSTIN:{senderGST}</p>
         </div>
-        <div className="border-l-2 border-black  p-8 pt-10"><img src={logo} alt="bar" /></div>
+
+        <div className="border-1 border-black grid grid-cols-3 ">
+          <div className="border-l-2 border-r-2 border-black text-xl text-center font-semibold py-12">Invoice No. <p className="text-sm font-normal">{invoiceNo}</p></div>
+          <div className="border-1 grid grid-rows-2 h-[190px] ">
+            <div className="border-d-1 text-xl text-center font-semibold py-6">Invoice Date <p className="text-sm font-normal">{invoiceDate}</p></div>
+            <div className="border-t-2 border-black text-xl text-center font-semibold py-6">Invoice Due <p className="text-sm font-normal">{invoiceDue}</p></div>
+          </div>
+          <div className="flex-auto border-l-2 border-black  p-8 pt-10"><img src={logo} alt="bar" /></div>
+        </div>
+      
+        <div className="border-t-2 border-black  p-2">
+          <h1 className="text-xl font-semibold">Bill To</h1>
+          <h2 className="my-2 text-xl font-semibold">{billerName}</h2>
+          <p className="text-sm">{billerAddress}<br/> Ph No. {billerPhone} <br/> GSTIN: {billerGST} <br/> Place of Supply:{billerPlace}</p> 
+        </div>
+
+        <div className="border-t-2 border-l-2 border-black p-2">
+          <h1 className="text-xl font-semibold">Deliver To</h1>
+          <h2 className="my-2 text-xl font-semibold">{billerName}</h2>
+          <p className="text-sm">{billerAddress}<br/> Ph No. {billerPhone} <br/> GSTIN: {billerGST} <br/> Place of Supply:{billerPlace}</p> 
+        </div>
       </div>
 
-      <div className="border-t-2 border-black  p-2">
-      <h1 className="text-xl font-semibold">Bill To</h1>
-        <h2 className="my-2 text-xl font-semibold">{billerName}</h2>
-        <p className="text-sm">{billerAddress}<br/> Ph No. {billerPhone} <br/> GSTIN: {billerGST} <br/> Place of Supply:{billerPlace}</p> 
-      </div>
-
-      <div className="border-t-2 border-l-2 border-black p-2">
-      <h1 className="text-xl font-semibold">Deliver To</h1>
-        <h2 className="my-2 text-xl font-semibold">{billerName}</h2>
-        <p className="text-sm">{billerAddress}<br/> Ph No. {billerPhone} <br/> GSTIN: {billerGST} <br/> Place of Supply:{billerPlace}</p> 
-      </div>
-
-      <div className="grid col-span-2 row-span-2 border-t-2 border-black h-auto text-center ">
-        <table className=" text-sm text-auto">
+      <div className=" pt-2 pb-2 flex-auto border-t-2 border-black h-auto text-center ">
+        <table className=" text-sm text-auto h-auto w-full">
             <tr className="border-b-2 border-black">
               <th>S.No.</th>
               <th className="w-[170px]">Product Name</th>
@@ -122,11 +124,95 @@ function App() {
               <td>{itemsArray[0].otherCharges}</td>              
               <td>{itemsArray[0].total_Amount}</td>              
             </tr>
+
+            <tr className="font-semibold">
+              <td>{itemsArray[0].sno}</td>
+              <td className="text-left">{itemsArray[0].productName} <p className="font-thin text-xs">HSN Code: {itemsArray[0].hsn}</p></td>
+              <td >{itemsArray[0].quantity}</td>
+              <td>{itemsArray[0].rate}</td>
+              <td>{itemsArray[0].discount}</td>              
+              <td>{itemsArray[0].tax_Amount}</td>              
+              <td>{itemsArray[0].sGST}</td>              
+              <td>{itemsArray[0].cGST}</td>              
+              <td>{itemsArray[0].cess}</td>              
+              <td>{itemsArray[0].otherCharges}</td>              
+              <td>{itemsArray[0].total_Amount}</td>              
+            </tr>
+
+            <tr className="font-semibold">
+              <td>{itemsArray[0].sno}</td>
+              <td className="text-left">{itemsArray[0].productName} <p className="font-thin text-xs">HSN Code: {itemsArray[0].hsn}</p></td>
+              <td >{itemsArray[0].quantity}</td>
+              <td>{itemsArray[0].rate}</td>
+              <td>{itemsArray[0].discount}</td>              
+              <td>{itemsArray[0].tax_Amount}</td>              
+              <td>{itemsArray[0].sGST}</td>              
+              <td>{itemsArray[0].cGST}</td>              
+              <td>{itemsArray[0].cess}</td>              
+              <td>{itemsArray[0].otherCharges}</td>              
+              <td>{itemsArray[0].total_Amount}</td>              
+            </tr>
+
+            <tr className="font-semibold">
+              <td>{itemsArray[0].sno}</td>
+              <td className="text-left">{itemsArray[0].productName} <p className="font-thin text-xs">HSN Code: {itemsArray[0].hsn}</p></td>
+              <td >{itemsArray[0].quantity}</td>
+              <td>{itemsArray[0].rate}</td>
+              <td>{itemsArray[0].discount}</td>              
+              <td>{itemsArray[0].tax_Amount}</td>              
+              <td>{itemsArray[0].sGST}</td>              
+              <td>{itemsArray[0].cGST}</td>              
+              <td>{itemsArray[0].cess}</td>              
+              <td>{itemsArray[0].otherCharges}</td>              
+              <td>{itemsArray[0].total_Amount}</td>              
+            </tr>
+
+            <tr className="font-semibold">
+              <td>{itemsArray[0].sno}</td>
+              <td className="text-left">{itemsArray[0].productName} <p className="font-thin text-xs">HSN Code: {itemsArray[0].hsn}</p></td>
+              <td >{itemsArray[0].quantity}</td>
+              <td>{itemsArray[0].rate}</td>
+              <td>{itemsArray[0].discount}</td>              
+              <td>{itemsArray[0].tax_Amount}</td>              
+              <td>{itemsArray[0].sGST}</td>              
+              <td>{itemsArray[0].cGST}</td>              
+              <td>{itemsArray[0].cess}</td>              
+              <td>{itemsArray[0].otherCharges}</td>              
+              <td>{itemsArray[0].total_Amount}</td>              
+            </tr>
+
+            <tr className="font-semibold">
+              <td>{itemsArray[0].sno}</td>
+              <td className="text-left">{itemsArray[0].productName} <p className="font-thin text-xs">HSN Code: {itemsArray[0].hsn}</p></td>
+              <td >{itemsArray[0].quantity}</td>
+              <td>{itemsArray[0].rate}</td>
+              <td>{itemsArray[0].discount}</td>              
+              <td>{itemsArray[0].tax_Amount}</td>              
+              <td>{itemsArray[0].sGST}</td>              
+              <td>{itemsArray[0].cGST}</td>              
+              <td>{itemsArray[0].cess}</td>              
+              <td>{itemsArray[0].otherCharges}</td>              
+              <td>{itemsArray[0].total_Amount}</td>              
+            </tr>
+
+            <tr className="font-semibold">
+              <td>{itemsArray[0].sno}</td>
+              <td className="text-left">{itemsArray[0].productName} <p className="font-thin text-xs">HSN Code: {itemsArray[0].hsn}</p></td>
+              <td >{itemsArray[0].quantity}</td>
+              <td>{itemsArray[0].rate}</td>
+              <td>{itemsArray[0].discount}</td>              
+              <td>{itemsArray[0].tax_Amount}</td>              
+              <td>{itemsArray[0].sGST}</td>              
+              <td>{itemsArray[0].cGST}</td>              
+              <td>{itemsArray[0].cess}</td>              
+              <td>{itemsArray[0].otherCharges}</td>              
+              <td>{itemsArray[0].total_Amount}</td>              
+            </tr>
         </table>  
       </div>    
 
-      <div className="border-t-2 border-b-2 border-black col-span-2">
-      <table className="table-auto text-sm w-full text-center divide-black divide-y-2">
+      <div className="flex-auto border-t-2 my-auto border-b-2 border-black ">
+      <table className="my-auto table-auto text-sm w-full text-center divide-black divide-y-2">
             <tr className=" divide-black divide-x-2">
               <th>Taxable Amt</th>
               <th>SGST Amt</th>
@@ -143,6 +229,8 @@ function App() {
               <td>0.55</td>
               <td>500</td>
             </tr>
+
+            
           </table>
           <div className="text-sm p-3 border-t-2 border-black font-semibold">
             <h1>e-Invoice Details</h1>
@@ -166,7 +254,7 @@ function App() {
         
       </div>  
 
-      <div className="col-span-2  p-3">
+      <div className="flex-auto p-3">
           <h1 className="text-lg font-semibold">Notes</h1>
           <p className="text-sm">All claims, if any, for shortages or damages must be reported to customer service on the day of delivery through contact us page at movo.in</p>
 
