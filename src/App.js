@@ -32,7 +32,36 @@ function App() {
       cess:5,
       otherCharges:50,
       total_Amount:499.00,
+    },
+    {
+      sno : 2,
+      productName : "SUPER COLLAGEN | For Naturally Glowing & Radiant Skin",
+      hsn:"AX455",
+      quantity: 2,
+      rate: 200,
+      discount: 53,
+      tax_Amount:1500,
+      sGST:2,
+      cGST:3,
+      cess:5,
+      otherCharges:50,
+      total_Amount:499.00,
+    },
+    {
+      sno : 3,
+      productName : "SUPER COLLAGEN | For Naturally Glowing & Radiant Skin",
+      hsn:"AX455",
+      quantity: 2,
+      rate: 200,
+      discount: 53,
+      tax_Amount:1500,
+      sGST:2,
+      cGST:3,
+      cess:5,
+      otherCharges:50,
+      total_Amount:499.00,
     }
+    
   ];
 
   return (
@@ -44,13 +73,13 @@ function App() {
           <p className="text-sm">{senderAddress}<br/> Ph No. {senderPhone} <br/> GSTIN:{senderGST}</p>
         </div>
 
-        <div className="border-1 border-black grid grid-cols-3 ">
-          <div className="border-l-2 border-r-2 border-black text-xl text-center font-semibold py-12">Invoice No. <p className="text-sm font-normal">{invoiceNo}</p></div>
-          <div className="border-1 grid grid-rows-2 h-[190px] ">
-            <div className="border-d-1 text-xl text-center font-semibold py-6">Invoice Date <p className="text-sm font-normal">{invoiceDate}</p></div>
-            <div className="border-t-2 border-black text-xl text-center font-semibold py-6">Invoice Due <p className="text-sm font-normal">{invoiceDue}</p></div>
+        <div className="border-1 border-black grid grid-cols-3 items-center text-center ">
+          <div className="h-full border-l-2 border-r-2 border-black text-xl text-center font-semibold py-20 ">Invoice No. <p className="text-sm font-normal">{invoiceNo}</p></div>
+          <div className="h-full border-1 grid grid-rows-2 text-center ">
+            <div className="border-d-1 text-xl text-center font-semibold py-6 ">Invoice Date <p className="text-sm font-normal">{invoiceDate}</p></div>
+            <div className="border-t-2 border-black text-xl text-center font-semibold py-6 ">Invoice Due <p className="text-sm font-normal">{invoiceDue}</p></div>
           </div>
-          <div className="flex-auto border-l-2 border-black  p-8 pt-10"><img src={logo} alt="bar" /></div>
+          <div className="h-full flex-auto border-l-2 border-black p-4 pt-16"><img src={logo} alt="bar" /></div>
         </div>
       
         <div className="border-t-2 border-black  p-2">
@@ -83,117 +112,23 @@ function App() {
               
             </tr>
             
-            <tr className="font-semibold">
-              <td>{itemsArray[0].sno}</td>
-              <td className="text-left">{itemsArray[0].productName} <p className="font-thin text-xs">HSN Code: {itemsArray[0].hsn}</p></td>
-              <td >{itemsArray[0].quantity}</td>
-              <td>{itemsArray[0].rate}</td>
-              <td>{itemsArray[0].discount}</td>              
-              <td>{itemsArray[0].tax_Amount}</td>              
-              <td>{itemsArray[0].sGST}</td>              
-              <td>{itemsArray[0].cGST}</td>              
-              <td>{itemsArray[0].cess}</td>              
-              <td>{itemsArray[0].otherCharges}</td>              
-              <td>{itemsArray[0].total_Amount}</td>              
-            </tr>
-
-            <tr className="font-semibold">
-              <td>{itemsArray[0].sno}</td>
-              <td className="text-left">{itemsArray[0].productName} <p className="font-thin text-xs">HSN Code: {itemsArray[0].hsn}</p></td>
-              <td >{itemsArray[0].quantity}</td>
-              <td>{itemsArray[0].rate}</td>
-              <td>{itemsArray[0].discount}</td>              
-              <td>{itemsArray[0].tax_Amount}</td>              
-              <td>{itemsArray[0].sGST}</td>              
-              <td>{itemsArray[0].cGST}</td>              
-              <td>{itemsArray[0].cess}</td>              
-              <td>{itemsArray[0].otherCharges}</td>              
-              <td>{itemsArray[0].total_Amount}</td>              
-            </tr>
-
-            <tr className="font-semibold">
-              <td>{itemsArray[0].sno}</td>
-              <td className="text-left">{itemsArray[0].productName} <p className="font-thin text-xs">HSN Code: {itemsArray[0].hsn}</p></td>
-              <td >{itemsArray[0].quantity}</td>
-              <td>{itemsArray[0].rate}</td>
-              <td>{itemsArray[0].discount}</td>              
-              <td>{itemsArray[0].tax_Amount}</td>              
-              <td>{itemsArray[0].sGST}</td>              
-              <td>{itemsArray[0].cGST}</td>              
-              <td>{itemsArray[0].cess}</td>              
-              <td>{itemsArray[0].otherCharges}</td>              
-              <td>{itemsArray[0].total_Amount}</td>              
-            </tr>
-
-            <tr className="font-semibold">
-              <td>{itemsArray[0].sno}</td>
-              <td className="text-left">{itemsArray[0].productName} <p className="font-thin text-xs">HSN Code: {itemsArray[0].hsn}</p></td>
-              <td >{itemsArray[0].quantity}</td>
-              <td>{itemsArray[0].rate}</td>
-              <td>{itemsArray[0].discount}</td>              
-              <td>{itemsArray[0].tax_Amount}</td>              
-              <td>{itemsArray[0].sGST}</td>              
-              <td>{itemsArray[0].cGST}</td>              
-              <td>{itemsArray[0].cess}</td>              
-              <td>{itemsArray[0].otherCharges}</td>              
-              <td>{itemsArray[0].total_Amount}</td>              
-            </tr>
-
-            <tr className="font-semibold">
-              <td>{itemsArray[0].sno}</td>
-              <td className="text-left">{itemsArray[0].productName} <p className="font-thin text-xs">HSN Code: {itemsArray[0].hsn}</p></td>
-              <td >{itemsArray[0].quantity}</td>
-              <td>{itemsArray[0].rate}</td>
-              <td>{itemsArray[0].discount}</td>              
-              <td>{itemsArray[0].tax_Amount}</td>              
-              <td>{itemsArray[0].sGST}</td>              
-              <td>{itemsArray[0].cGST}</td>              
-              <td>{itemsArray[0].cess}</td>              
-              <td>{itemsArray[0].otherCharges}</td>              
-              <td>{itemsArray[0].total_Amount}</td>              
-            </tr>
-
-            <tr className="font-semibold">
-              <td>{itemsArray[0].sno}</td>
-              <td className="text-left">{itemsArray[0].productName} <p className="font-thin text-xs">HSN Code: {itemsArray[0].hsn}</p></td>
-              <td >{itemsArray[0].quantity}</td>
-              <td>{itemsArray[0].rate}</td>
-              <td>{itemsArray[0].discount}</td>              
-              <td>{itemsArray[0].tax_Amount}</td>              
-              <td>{itemsArray[0].sGST}</td>              
-              <td>{itemsArray[0].cGST}</td>              
-              <td>{itemsArray[0].cess}</td>              
-              <td>{itemsArray[0].otherCharges}</td>              
-              <td>{itemsArray[0].total_Amount}</td>              
-            </tr>
-
-            <tr className="font-semibold">
-              <td>{itemsArray[0].sno}</td>
-              <td className="text-left">{itemsArray[0].productName} <p className="font-thin text-xs">HSN Code: {itemsArray[0].hsn}</p></td>
-              <td >{itemsArray[0].quantity}</td>
-              <td>{itemsArray[0].rate}</td>
-              <td>{itemsArray[0].discount}</td>              
-              <td>{itemsArray[0].tax_Amount}</td>              
-              <td>{itemsArray[0].sGST}</td>              
-              <td>{itemsArray[0].cGST}</td>              
-              <td>{itemsArray[0].cess}</td>              
-              <td>{itemsArray[0].otherCharges}</td>              
-              <td>{itemsArray[0].total_Amount}</td>              
-            </tr>
-
-            <tr className="font-semibold">
-              <td>{itemsArray[0].sno}</td>
-              <td className="text-left">{itemsArray[0].productName} <p className="font-thin text-xs">HSN Code: {itemsArray[0].hsn}</p></td>
-              <td >{itemsArray[0].quantity}</td>
-              <td>{itemsArray[0].rate}</td>
-              <td>{itemsArray[0].discount}</td>              
-              <td>{itemsArray[0].tax_Amount}</td>              
-              <td>{itemsArray[0].sGST}</td>              
-              <td>{itemsArray[0].cGST}</td>              
-              <td>{itemsArray[0].cess}</td>              
-              <td>{itemsArray[0].otherCharges}</td>              
-              <td>{itemsArray[0].total_Amount}</td>              
-            </tr>
+              {itemsArray.map((value)=>{
+                return(
+                <tr className="font-semibold">
+                  <td>{value.sno}</td>
+                  <td className="text-left">{value.productName} <p className="font-thin text-xs">HSN Code: {value.hsn}</p></td>
+                  <td >{value.quantity}</td>
+                  <td>{value.rate}</td>
+                  <td>{value.discount}</td>              
+                  <td>{value.tax_Amount}</td>              
+                  <td>{value.sGST}</td>              
+                  <td>{value.cGST}</td>              
+                  <td>{value.cess}</td>              
+                  <td>{value.otherCharges}</td>              
+                  <td>{value.total_Amount}</td>              
+              </tr>
+                )
+            })}
         </table>  
       </div>    
 
