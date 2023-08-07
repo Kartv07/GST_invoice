@@ -194,20 +194,6 @@ function App() {
               <td>{itemsArray[0].otherCharges}</td>              
               <td>{itemsArray[0].total_Amount}</td>              
             </tr>
-
-            <tr className="font-semibold">
-              <td>{itemsArray[0].sno}</td>
-              <td className="text-left">{itemsArray[0].productName} <p className="font-thin text-xs">HSN Code: {itemsArray[0].hsn}</p></td>
-              <td >{itemsArray[0].quantity}</td>
-              <td>{itemsArray[0].rate}</td>
-              <td>{itemsArray[0].discount}</td>              
-              <td>{itemsArray[0].tax_Amount}</td>              
-              <td>{itemsArray[0].sGST}</td>              
-              <td>{itemsArray[0].cGST}</td>              
-              <td>{itemsArray[0].cess}</td>              
-              <td>{itemsArray[0].otherCharges}</td>              
-              <td>{itemsArray[0].total_Amount}</td>              
-            </tr>
         </table>  
       </div>    
 
